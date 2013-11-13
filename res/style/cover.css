@@ -1,0 +1,30 @@
+body{
+    height: 1123px;
+    width: 794px;
+    margin:0px;
+    padding:0px;
+}
+html,body{
+    font-family:Microsoft YaHei;
+    margin:0px;
+    padding:0px;
+}
+
+h3,h4{
+    font-size:20px;
+    color:#3d69a8;
+}
+h3,h4,h5{
+    line-height:5px;
+}
+
+h5{
+font-size:17px;
+font-weight:normal;
+    line-height:6px;
+
+}
+hr{
+    border:none;
+    border-bottom:1px solid dashed;
+}

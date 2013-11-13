@@ -1,119 +1,162 @@
-# coding: utf-8
+# - * - coding: UTF-8 - *
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-base_folder="/Users/Arthur/Dropbox/project/spider/res/"
+base_folder="/vagrant/11/res/"
 base_arch=base_folder+'arch/'
 
-which_month='8'
-chief_editor="水羽哲"
-chief_editor_desc="水羽哲，InfoQ中文站内容运营编辑，喜欢宅着看火影、海贼，没事爱写代码！"
-chief_editor_image="shuiyuzhe.jpg"
 
-plant_name='蔷薇'
-plant_desc='蔷薇（学名：Rosa multiflora），又称野蔷薇，蔷薇科植物，主要分布在北半球温带、亚热带及热带山区等地区。蔷薇花是一种蔓藤爬篱笆的小花，花盘环绕萼筒口部，有白色、黄色等多种颜色，叶互生，奇数羽状复叶，其耐寒，有野生的，可用压条或嫁接法繁殖等种植方法。蔷薇可以药用，由其制成的蔷薇花粥有良好的营养价值。其不同颜色有不同花语，如红蔷薇代表热恋； 粉蔷薇代表爱的誓言。全属约有200种，广泛分布亚、欧、北非、北美各洲寒温带至亚热带地区。我国产82种。生长习性蔷薇喜阳光，亦耐半阴，较耐寒，在中国北方大部分地区都能露地越冬。对土壤要求不严，耐干旱，耐瘠薄，但栽植在土层深厚、疏松、肥沃湿润而又排水通畅的土壤中则生长更好，也可在粘重土壤上正常生长。不耐水湿，忌积水。新株定植时要施入腐熟有机肥。霜植后头一二年可于每年深秋开沟施一次基肥，以利生长和开花。萌蘖性强，耐修剪，抗污染。花期一般为每年的4-9月，次序开放，可达半年之久，由于温室效应而导致全球变暖，某些地方的蔷薇提早在4月，甚至是3月份便开始开花。中国人在文学作品和日常生活中、口语中的蔷薇，一般指黄蔷薇和野蔷薇。严格的说来，蔷薇属除少数玫瑰及月季外都称作蔷薇，而每一种蔷薇前面都有形容词，如矮蔷薇、藏边蔷薇、多腺小叶蔷薇等。此属品种全世界约有200种，品种繁多，变异极大，有许多变种及园艺栽培种，多产北半球温带、亚热带及热带山区。'
-plant_img='qiangwei.png'
+which_month='11'
+chief_editor="侯伯薇"
+chief_editor_desc="侯伯薇，生于丹东凤城，学在春城长春，工作在滨城大连；虽已年过而立，但自问童心未泯；对代码热情不减，愿与天下程序员共同修炼，不断提升。译有《学习WCF》、《Expert C# 2008 Business Objets》。"
+chief_editor_image="houbowei.jpg"
 
+plant_name='山楂'
+plant_desc='''
+茶花，又名山茶花，山茶科植物，属常绿灌木和小乔木。古名海石榴。有玉茗花、耐冬或曼陀罗等别名，又被分为华东山茶、川茶花和晚山茶。茶花的品种极多，是中国传统的观赏花卉，“十大名花”中排名第七，亦是世界名贵花木之一。分布于重庆、浙江、四川、江西及山东；日本、朝鲜半岛也有分布。
+山茶是常绿阔叶灌木或小乔木。枝条黄褐色，小枝呈绿色或绿紫色至紫褐色。叶片革质，互生，椭圆形、长椭圆形、卵形至倒卵形，长4～10cm，先端渐尖或急尖，基部楔形至近半圆形，边缘有锯齿，叶片正面为深绿色，多数有光泽，背面较淡，叶片光滑无毛，叶柄粗短，有柔毛或无毛。花两性，常单生或2～3朵着生于枝梢顶端或叶腋间。花梗极短或不明显，苞萼9～10片，覆瓦状排列，被茸毛。花单瓣，花瓣5～7片，呈1～2轮覆瓦状排列，花朵直径5～6cm，色大红，花瓣先端有凹或缺口，基部连生成一体而呈简状；雄蕊发达，多达100余枚，花丝白色或有红晕，基部连生成筒状，集聚花心，花药金黄色；雌蕊发育正常，子房光滑无毛，3～4室，花柱单一，柱头3～5裂，结实率高。荫果圆形，外壳本质化，成熟茹果能自然从背缝开裂，散出种子。山茶花为常绿花木，开花于冬春之际，花姿绰约，花色鲜艳，郭沫若同志盛赞曰：“茶花一树早桃红，百朵彤云啸傲中。”对云南山茶郭老也曾赋诗赞美：“艳说茶花是省花，今来始见满城霞；人人都道牡丹好，我道牡丹不及茶。
+'''
+plant_img='shanzha.jpg'
 
-recommand_editor_name='臧秀涛'
-recommand_editor_img='zangxiutao.png'
-recommand_editor_desc='''各位读者朋友，大家好。很荣幸受邀成为本期《架构师》的推荐编辑。和InfoQ网站结缘已久，因为对Java和架构的爱好，每每被该网站的高质量内容所吸引，第一手的热点新闻和业界报道也让我受益匪浅。
-机缘巧合，在新浪微博上看到InfoQ中文站主编贾国清（@frankjiagq）发布的译者招募信息，我便跃跃欲试了。因为之前翻译过一些技术文章，也跟别人合作翻译了一本技术书籍，所以希望能在InfoQ中文站上为技术传播贡献一份自己的力量。
-InfoQ中文站对翻译的质量要求比较严格，新人加入要经过试译，试译通过之后才专为译者。而译者提交的译稿也要经过老编辑审校通过之后才能发布。前辈们的审校让我在准确表达、遣词造句和流畅表达方面获益良多。
-加入之后，才发现翻译新闻和文章远远不是英文转换成中文这么简单。作为技术翻译，原文上的各种资料链接、技术背景都要了解一下，这是准确传达的前提。此后还要考虑遣词造句和中文习惯等问题。在自己可控的范围内，尽量做到最好，所以一篇稿件前前后后可能要处理四五次。发布之后也是诚惶诚恐，一方面自己会再读一遍，发现问题马上反馈；另一方面期待读者的评论，尽量和读者互动。有时候发布之后要修改感觉不太舒服的地方，可给水羽哲等编辑添了不少麻烦。
-谈到与读者的互动，这里补充几句。非常希望能跟读者进行高质量的互动，但是有时候看到“像机器翻译的一样”之类的留言，心里很不是滋味。当然，问题肯定在译者身上，存在理解不到位和表达不到位等问题，这时候就要再回过头来核对，甚至找其他编辑帮忙看看，借以改进质量。但是，如果读者能详细指出一些具体问题，那真是求之不得，万分感谢的。希望能和读者共同进步。
-</p><p>InfoQ编辑团队非常务实，大家经常为一些翻译或技术细节探讨半天，群策群力，争取准确地传达信息，“促进软件开发领域知识和创新的传播”。跟大家的合作非常开心。我的新浪微博是@臧秀涛，希望有机会跟读者进行更多交流。如果您有意加入我们，做技术的传播者，请邮件联系editors@cn.infoq.com。
+## TODO: not 
+recommand_editor_name='姚琪琳'
+recommand_editor_img='yaoqilin.png'
+recommand_editor_desc='''还记得在InfoQ试译的第一篇新闻被笠翔改得面目全非的情形，这让我想起了8年前帮导师翻译书籍的往事。当时我的译稿也被负责该项目的师兄改得面目全非，看着文档上一片一片的红字，我的脸也一阵红一阵白。师兄几乎完全重新翻译了我的那部分，这让我更加愧疚。但正是这样鲜明的对比，让我知道了什么是好的翻译，什么是烂的翻译，以及应该如何翻译得更好。可以说，是这位师兄把我领入了翻译之门。</p>
+
+<p>从08年开始，我跟图灵合作翻译了多本技术书籍，包括《深入理解C#（第2版）》、《精通C#（第6版）》、《C#图解教程（第4版）》、《C#与.NET 4高级程序设计（第5版）》等。然而翻译书和翻译新闻并不尽相同。一般原版书籍的语言都比较浅显，作者往往会不惜笔墨，力求表述得清晰明了。而新闻文字则惜墨如金，尽量用精炼的语言传达更多的含义。因此我在试译的时候就感到极不适应，被笠翔审批得满目疮痍并不出乎我的意料。而且，我还感受到了当年师兄指导我时的那种耐心和责任心。当我私下跟笠翔联系，表达感激之情和惭愧之意时，笠翔说没关系，当年他也被伯薇批得很惨。这让我更加切实地感受到了InfoQ团队一如既往一脉传承一丝不苟的态度。</p>
+
+<p>在当年国内的技术翻译良莠不齐的时候，InfoQ独自扛起大旗，将一大批技术牛人招致麾下，成为InfoQ的兼职编辑。这些牛人保证了翻译质量，使得InfoQ上不计其数的英文新闻和文章也能成为广大国内程序员的精神食粮，不断地拓展着他们的视野，激励着他们前行。我就是那个时候开始关注InfoQ的，同时也梦想着有一天自己也能强大到可以成为他们的一员，通过自己的翻译特长，为广大程序员提供帮助。我曾多次在微博上看到泰稳和国清在招贤纳士，但始终无法鼓足勇气。直到去年8月的某天，我终于给国清发了私信，正式成为了一名光荣的InfoQ编辑。</p>
+
+<p>在编辑的群里，我常常被秀涛的严谨所震撼（他常常在阅读文章时发现感觉不对的地方，就查找原文，找出错误，并在群中提出），被李彬的高产所折服，被各位编辑一起咬文嚼字反复推敲的精神所感动。我为我能找到这样一群志同道合的朋友而感到欣慰。今年的QCon北京，我有幸见到了InfoQ的水哥、赛姐、Jessie、国清等人，以及秀涛、锦龙等跟我同一批成为编辑的兄弟。非常感谢InfoQ组织这样的大会，并且给予我们免费参加的福利。</p>
+
+<p>说了这么多，还没有自我介绍。我叫姚琪琳，现在在ThoughtWorks写代码，对翻译、OO、.NET、Java等十分感兴趣，如果你想跟我交流，可以通过以下方式与我取得联系：
+Weibo：@珧麒麟，
+Blog：http://kirinboy.cnblogs.com，
+Email：kirinboy@gmail.com。
 '''
 
-foreword_title='取舍'
-forword_content=''''''
+foreword_title='第一手知识——切身体验'
+forword_content='''
+InfoQ中文站的QCon大会已经为业界的朋友所熟知，三天的日程中，各种演讲干货之多，场面之精彩已经让越来越多的人愿意加入到这个大平台中来交流和分享。而大家不知道的是，为了让各位讲师能够在现场有更出色的表现，InfoQ从今年的QCon北京开始，都会在会前一个月左右为各位讲师安排一场特殊的培训——QCon讲师训练营。</p>
+
+<p>10月12日，我也有幸作为InfoQ的编辑参加了训练营，聆听了杨天颖老师一天的课程，收获非常大。而在10月26日大连本地的QClub活动上，我在演讲中着重实践了杨老师教授的各种技能，包括：手势、J-Cutting的场景转换、放慢语速、把QA环节放在总结之前等等，得到的效果非常不错。</p>
+
+<p>经过活动上的演讲，非常重要的一点就是，我把训练营上获得的知识真正消化吸收了一部分，如果说经过别人总结归纳然后讲述出来的知识是第二手的知识，那么在实践中通过自己的切身体验所获得的知识绝对是第一手的知识，而这种知识也因为其新鲜的程度以及和自己密切相关，所以更容易让我牢记。</p>
+
+<p>在演讲的过程中如此，在作为程序员编写各种各样程序的过程中也是一样。
+曾经在公司面试新员工的时候，非常注重的一点就是——是否做过真实的项目，相信很多公司中的面试官也是一样。仅仅学习并掌握了书本上的内容是不够的，“纸上学来终觉浅，绝知此事要躬行”，只有在切实利用学到的知识解决了实际的问题之后，即获得了第一手的知识之后，才能够对其有深入的了解，从而可以在以后的工作中更好地应用。这也许就是大家所说的经验吧。</p>
+
+<p>在网络上经常会有各种各样的争论，有时是使用各种语言的程序员争论到底哪种语言才最好、才是王道，有时是开发人员和测试人员相互攻击，都认为对方的工作不重要，只有自己的工作才是重中之重。其实，往往争论的同学对于另一方的知识只是有个简单的了解，掌握的大多是二手的知识，即便有少许一手知识，通常也是浅尝辄止。正因为没有切身体验，才会因为不了解真实的情况而去争论。如果一名程序员掌握了多种语言、框架、工具，那么就不会争论孰优孰劣的问题，而是会根据具体的情况选择最为合适的工具来解决问题；如果一个人既做过开发，也做过测试工作，那么就不会厚此薄彼，因为他很清楚，两种角色都是团队的组成元素，都有其重要的作用，缺一不可。</p>
+
+<p>对于敏捷的方法也同样有很多质疑，不少人总是觉得只有传统的软件工程方法才能够真正保证项目的成功。仅仅比较一下二者的不同就妄下断言。其实，想要知道敏捷的方法是否适合自己的项目，是否能够解决团队管理以及项目开发中的问题，唯一的方法就是“just do it！”尝试过一次，无论成功与失败，都会获得第一手的知识，成功的话，可以作为经验来推广，在以后的项目中进一步应用和提升；失败的话，也明白到底是什么地方出现了问题，以后可以尽量去避免类似情况的发生。这些都要比单纯的怀疑和无意义的争论强得多。</p>
+
+<p>第一手的知识之所以重要，是因为它只能存在于一个人的头脑之中，体现在一个人的行为之中，而不是简简单单通过在网上Google一下就能够找到的。一个人只有掌握了足够的第一手知识，才能够不断提升，体现出与其他人的不同，才能够达到传说中的高手境界。
+所以，程序员朋友们，让我们为了掌握更多的第一手知识而努力吧！'''
+
+column_image = 'topic.png'
+column_title='AWDC（阿里云开发者大会）'
+column_desc='''2013年10月24、25日，阿里云开发者大会在杭州转塘阿里云创业新基地召开，这次会议以“云计算的蝴蝶效应”为主题，第一天进行大赛的参赛作品评选，第二天围绕“移动互联网”、“游戏”、“开发者服务”和“金融创新”设置了分论坛进行分享。
+'''
+## TODO: change the words of the topic
+topic_image='column.jpeg'
+topic_title='软件测试的方方面面'
+topic_desc='''前几天看到了一篇关于丰田的消息，由于其动力控制系统软件的质量问题，导致在某些情况下会出现刹车失灵的状况。抛去系统架构、设计等方面的原因不谈，我想到更多的是要对系统的测试引起重视。</p>
+
+<p>所以本期专栏让我们来看看软件测试的方方面面，我为大家选择了三篇文章，从三个不同的角度来看软件测试的方方面面。</p>
+
+<p>图形化界面上的自动化测试一直困扰着很多测试人员，《GUI功能测试自动化模式》让我们可以了解到，如何使用模式来自动化地完成图形化界面的测试，解决这个老大难问题，从而得到效率上的提升；</p>
+
+<p>测试覆盖率要达到什么样的标准，是不是越高越好呢？《测试覆盖（率）到底有什么用？》会告诉我们应该如何看待“测试覆盖率”这项KPI指标，如何充分利用好时间和精力；</p>
+
+<p>传统软件工程中，测试一直是下游工程，这也导致了很多问题，《全程软件测试实践：从需求到运营》会向我们展示一种不同以往的测试实践，测试人员全程参与到软件的生命周期之中，这样是否能够解决很多问题呢？'''
 
 
-
-topic_title='再谈REST'
-topic_desc='''
-
-<p>PC时代的软件以功能取胜，移动时代的软件以体验取胜。这是目前在做移动应用的很多开发者都感受到的一个现实。</p>
-
-<p>6月百度技术沙龙的话题是前端开发，同时也是InfoQ编辑的聚会。我们在聚会上邀请了前人人网前端负责人闫强一起过来玩，聊到前端职业发展这个话题的时候，他感慨道：前端这个领域很少有科班出身的。他自己的经历很“狂野”：攒过机器，修过笔记本，开过黑车，做过面馆，后来到做设计、Flash开发，到写HTML、JS，完全是一路闯过来的。</p>
-
-<p>在人人网，前端最早是属于产品部门的。在他看来，这是件羞于启齿的事情。后来，前端独立了出来。现在，前端能够给后端提意见，因为他们既懂设计，又懂产品，也懂技术。另一方面，百度的前端则提出了F.I.S.项目，项目负责人张云龙称其为“前端领域工业化”，提倡前端的自动化。不管从哪个角度来看，前端正在变成一个产业，这个产业涉及到设计、产品、技术，并越来越往工程化的方向前进。</p>
-
-<p>归根结底，跟电脑相关的设计都可以追溯到一个学科：人机交互。没有人可以知道在五年之后，指尖上的世界会变成什么样。但可以肯定的是，好的体验不再可有可无，因为用户对它具有非常高的期望！</p>'''
-
-
+gen_list=['arch/cover','arch/foreword','ads/InfoQ','arch/toc',
+'ads/qclub',
+'ads/baidusalon',
+'arch/0',
+'arch/1','arch/2',
+'arch/topic',
+'arch/3','arch/4','arch/5',
+'arch/6','arch/7',
+'ads/tuling',
+'arch/column','arch/8','arch/9','arch/10',
+'arch/11','arch/12','arch/13',
+'ads/youpai',
+'ads/book',
+'ads/history',
+'arch/plant',
+'ads/1kg',
+'ads/right']
 org_urls={
     "人物 | People":
     [
-        "http://www.infoq.com/cn/news/2013/07/oschina-on-tech-choice"
+        "http://www.infoq.com/cn/articles/apue_interview"
     ],
     
     "观点 | View":
     [
-        "http://www.infoq.com/cn/news/2013/07/things-change-processes",
-        "http://www.infoq.com/cn/news/2013/07/functional-programming"
+        "http://www.infoq.com/cn/news/2013/10/facebook-development-deployment",
+        "http://www.infoq.com/cn/news/2013/10/cloud-nosql"
     ],
 
-    "本期专题：再谈REST | Topic":
+    "本期专题：软件测试的方方面面 | Topic":
     [
-        "http://www.infoq.com/cn/articles/how-to-design-a-good-restful-api",
-        "http://www.infoq.com/cn/news/2013/05/idempotent",
-        "http://www.infoq.com/cn/news/2013/06/web-style"
+        "http://www.infoq.com/cn/articles/gui-automation-patterns",
+        "http://www.infoq.com/cn/articles/test-coverage-rate-role",
+        "http://www.infoq.com/cn/articles/whole-software-testing-practice-requirements-to-operational"
     ],
 
     "推荐文章 | Article":
     [
-        "http://www.infoq.com/cn/articles/Chris-Patterson",
-        "http://www.infoq.com/cn/articles/block-storage-overview",
-        "http://www.infoq.com/cn/articles/interoperability-is-the-key"
+        "http://www.infoq.com/cn/articles/BigDataPlatform",
+        "http://www.infoq.com/cn/articles/Introduction-to-HotSpot"
     ], 
 
     "特别专栏 | Column":
     [
-        "http://www.infoq.com/cn/news/2013/07/bachi-on-kissy",
-        "http://www.infoq.com/cn/news/2013/07/m-dmp-xucheng-interview",
-        "http://www.infoq.com/cn/news/2013/07/believe-data-power"
+        "http://www.infoq.com/cn/news/2013/11/alibaba-wangjian-on-cloud",
+        "http://www.infoq.com/cn/articles/ali-yun-on-feitian-5k",
+        "http://www.infoq.com/cn/news/2013/11/probing-ioe-and-isv",
     ],
 
     "避开那些坑 | Void":
     [
-        "http://www.infoq.com/cn/news/2013/07/xupeng-mysql-mistake",
-        "http://www.infoq.com/cn/news/2013/07/async-await-pitfalls",
+        "http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization",
+        "http://www.infoq.com/cn/articles/find-the-same-in-the-variable-from-CDN-to-cloud-computing"
     ],
 
     "新品推荐 | Product":
     [
-        "http://www.infoq.com/cn/news/2013/07/el3",
-        "http://www.infoq.com/cn/news/2013/07/vs2012_4RC1",
-        "http://www.infoq.com/cn/news/2013/07/NET-Reflector-8-2",
-        "http://www.infoq.com/cn/news/2013/07/essential-studio-for-javascript",
-        "http://www.infoq.com/cn/news/2013/07/dart-polymer-web-ui",
-        "http://www.infoq.com/cn/news/2013/07/gae-memcache-module",
-        "http://www.infoq.com/cn/news/2013/07/rails4"
+        "http://www.infoq.com/cn/news/2013/10/oracle-unveils-avatar",
+        "http://www.infoq.com/cn/news/2013/10/hazelcast-3.0",
+        "http://www.infoq.com/cn/news/2013/10/ryuJIT",
+        "http://www.infoq.com/cn/news/2013/10/ios-games-ruby",
+        "http://www.infoq.com/cn/news/2013/10/backbone-1.1.0-released",
+        "http://www.infoq.com/cn/news/2013/10/rubinius-2"
     ]
 
 }
 
-gen_list=['arch/cover','arch/foreword','ads/InfoQ','arch/toc',
-'ads/QClub','arch/0','arch/1','arch/2',
-'arch/topic',
-'arch/3',
-'arch/4',
-'arch/5',
-'arch/6',
-'arch/7',
-'arch/8',
-'arch/9',
-'arch/10',
-'arch/11',
-'arch/12',
-'arch/13',
-'arch/14',
-'ads/book',
-'ads/history',
-'arch/editor',
-'arch/plant',
-'ads/1kg',
-'arch/right']
+
+gen_list2=['ads\\InfoQ','arch\\toc',
+'ads\\QClub','arch\\0','arch\\1','arch\\2',
+'arch\\topic',
+'arch\\3',
+'arch\\4',
+'arch\\5',
+'arch\\6',
+'arch\\7',
+'arch\\8',
+'arch\\9',
+'arch\\column',
+'arch\\10',
+'arch\\11',
+'arch\\12',
+'arch\\13',
+'ads\\book',
+'ads\\history',
+'arch\\plant',
+'ads\\1kg']
 

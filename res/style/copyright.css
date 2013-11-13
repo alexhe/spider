@@ -1,11 +1,17 @@
- img{
-                float: left;
-                margin-right: 8px;
-                margin-bottom: 5px;
-            }
-
-            p{
-                margin: 0px;
-                padding: 0px;
-                margin-bottom: 0px;
-            }
+html{
+    height: 1000px;
+    width: 794px;
+}
+body{
+    height:100%;
+    }
+html,body{
+    font-family:Microsoft YaHei;
+}
+table{
+    margin-top:100px;
+    
+    }
+    td{
+        vertical-align:top;
+        }

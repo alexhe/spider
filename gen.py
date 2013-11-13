@@ -16,15 +16,15 @@ def append_pdf(input, output):
 output = PdfFileWriter()
 
 
-os.chdir(base_arch)
+os.chdir(unicode(base_arch,'utf8'))
 
 print '开始生成相关页面数据'
 for x in glob.glob("*.html"):
     if x=='cover.html':
-        os.system((u'wkhtmltopdf -s A4  -T 22mm -L 0mm -R 0mm   %s %s.pdf')%(x,x.split('.')[0]))
+    	print  'd'
+        os.system((u'wkhtmltopdf -s A4  -T 0mm -L 0mm   %s %s.pdf')%(x,x.split('.')[0]))
     else:
         os.system((u'wkhtmltopdf -s A4  --header-html '+base_folder+'res/header.html -T 22mm -L 0mm -R 0mm   %s %s.pdf')%(x,x.split('.')[0]))
-    print x
 
 
 print '开始合成'

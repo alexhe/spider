@@ -3,12 +3,19 @@ img{max-width: 500px;}
 table{margin-left: auto;margin-right: auto;}
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
 html{
+    word-break: break-all;
+    word-wrap: break-word;
 
 }
+img{max-width: 500px;}
+
 body{
 width:100%;
   margin-top: 26px;
   line-height: 1.5;
+      word-break: break-all;
+    word-wrap: break-word;
+
 
 }
 .page{ margin-left: auto;margin-right:auto;width:600px;margin-top: 10px; }
@@ -21,9 +28,10 @@ blockquote {
     margin: 10px 0;
     clear: both;
     display: block;
-    width: 555px;
+    width: 97%;
     border: 1px solid #e8e8e8;
     background: #f4f4f4 url(gg.jpg) no-repeat left top;
+    margin-top: -10px;
 }
 p{
     clear: both;
@@ -50,16 +58,20 @@ pre {
     border: 1px solid #e8e8e8;
     background: #f4f4f4 url(green_border.jpg) repeat-y left top;
     color: #314E64;
-    padding: 10px 10px 10px 55px;
+     padding: 10px 10px 10px 10px;
+    padding-left: 50px;
     line-height: 150%;
     margin: 10px 0 10px 0;
-    width: 90%;
-    overflow: scroll;
+    width: 97%;
     float: left;
+    word-break: break-all;
     text-align: left;
+    word-wrap: break-word;
     display: block;
     clear: both;
+    margin-top: -10px;
 }
+
 
 h1,h2,h3,h4,h5,h6 {
     line-height:1;font-family:Arial,sans-serif;
