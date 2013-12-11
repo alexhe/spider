@@ -18,7 +18,7 @@ from config import *
 
 ##########################################################################
 
-_list_org_urls=["人物 | People","观点 | View",    "本期专题：构建iOS持续集成平台 | Topic",
+_list_org_urls=["人物 | People","观点 | View",    "本期专题：内核那些事 | Topic",
     "推荐文章 | Article", "特别专栏 | Column","避开那些坑 | Void","新品推荐 | Product"]
 
 _urls={}
@@ -50,12 +50,13 @@ def prs(url,z):
 	match_table=d.find('table')
 	print 'match tab done'
 
-	match_img=d.find('p>img')
+	match_img=d.find('p > img')
 	i=0
 	ii=0
 	iii=0
 	import sys
 	print sys.getdefaultencoding()
+	'''
 	for x in match_pre:
 		print z,i
 		f=open(base_folder+"one/%s-pre-%s.html"%(str(z),str(i)),'wb+')
@@ -81,14 +82,19 @@ def prs(url,z):
 		print 'end tab%d'%ii
 	'''
 	for x in match_img:
-		_url = ('http://www.infoq.com/'+x.attrib['src'].split(';')[0])
+		_url = pq(d(x)).attr('src')
+		if _url is '' or _url is None:
+			continue
 		print _url
+		# ('http://www.infoq.com/'+x.attrib['src'].split(';')[0])
+		print _url
+		file_name = _url.replace('/','-').replace('http:--infoqstatic.com-resource',base_arch+'one').replace('one-','one/')
+		print file_name
 		_data = requests.get(_url)
-		f=open(base_arch+"one/%d-img-%d.png"%(z,iii),'wb')
-		f.write(_data.content)
-		f.close()
+		with open(file_name,'wb') as f:
+			f.write(_data.content)
+			f.close()
 		print 'end write img'
-	'''
 
 z=0
 for  x  in urls:

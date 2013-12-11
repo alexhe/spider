@@ -20,7 +20,7 @@ from config import *
 
 ##########################################################################
 
-_list_org_urls=["人物 | People","观点 | View",    "本期专题：软件测试的方方面面 | Topic",
+_list_org_urls=["人物 | People","观点 | View",    "本期专题：内核那些事 | Topic",
     "推荐文章 | Article", "特别专栏 | Column","避开那些坑 | Void","新品推荐 | Product"]
 
 _urls={}
@@ -86,13 +86,25 @@ def get_article_content(url):
     d = pq(data.content)
     pattern_pre = '{"topicIds": "(.*)", "title"'
     match_pre = re.findall(pattern_pre, data.content)
+    match_img=d.find('p > img')
     title = d('title').text()
     print '    '+str(title)
     author = d('.author_general').outerHtml().replace('href="/cn/author',
                                                       'href="http://infoq.com/cn/author').replace('<em>|</em>', '').replace('<em>/</em>', '')[:-72]
     content = d('.text_info_article').remove('.comments_like').remove('a[rel="permalink"]').remove('script').remove('.h1-r').remove('.related_sponsors').remove('.random_links').remove('.comment_here').remove('.comments').remove('.all_comments').remove(
         '#overlay_comments').remove('.related_sponsors').remove('#replyPopup').remove('#editCommentPopup').remove('#responseContent').remove('#messagePopup').remove('.related_sponsors').outerHtml().replace('src="/resource', 'src="http://www.infoq.com/resource').replace('<pre>','<pre><code>').replace('</pre>','</code></pre>')
-
+    for x in match_img:
+        _url = pq(d(x)).attr('src')
+        if _url is '' or _url is None:
+            continue
+        print _url
+        file_name = _url.replace('/','-').replace('http:--infoqstatic.com-resource',base_arch+'one').replace('one-','one/')
+        content=content.replace(_url,file_name.replace(base_arch,''))
+        _data = requests.get(_url)
+        with open(file_name,'wb') as f:
+            f.write(_data.content)
+            f.close()
+        print 'end write img'
     likes = ''
     try:
         likes = get_rec(title, url.replace(
@@ -114,12 +126,25 @@ def get_news_content(url):
     _de_pattern = '发布于[\s\S]*<em>\|</em>'
     match_pre = re.findall(pattern_pre, _data)
     title = d('title').text()
+    match_img=d.find('p > img')
     print '    '+str(title)
     author = d('.author_general').outerHtml().replace('href="/cn/author',
                                                       'href="http://infoq.com/cn/author').replace('<em>|</em>', '').replace('<em>/</em>', '')[:-60]
 
     content = d('.text_info').remove('.comments_like').remove('a[rel="permalink"]').remove('script').remove('.h1-r').remove('.related_sponsors').remove('.random_links').remove('.comment_here').remove('.comments').remove('.all_comments').remove(
         '#overlay_comments').remove('.related_sponsors').remove('#replyPopup').remove('#editCommentPopup').remove('#responseContent').remove('#messagePopup').remove('.related_sponsors').outerHtml().replace('src="/resource', 'src="http://www.infoq.com/resource').replace('<pre>','<pre><code>').replace('</pre>','</code></pre>')
+    for x in match_img:
+        _url = pq(d(x)).attr('src')
+        if _url is '' or _url is None:
+            continue
+        print _url
+        file_name = _url.replace('/','-').replace('http:--infoqstatic.com-resource',base_arch+'one').replace('one-','one/')
+        content.replace(_url,file_name)
+        _data = requests.get(_url)
+        with open(file_name,'wb') as f:
+            f.write(_data.content)
+            f.close()
+        print 'end write img'
     likes = ''
     try:
         likes = get_rec(title, url.replace(
@@ -299,6 +324,47 @@ def gen_toc():
             html__+=('<h4>'+x+'</h4>')
             for y in org_urls[x]:
                 html__+=('<p>'+get_title(y)+'</p>')
+        f.write(html__)
+def gen_toc_for_kindle():
+    with open(base_arch+'toc_kindle.html','w+') as f:
+        html__='''
+        <html>
+        <head>
+    
+            <link rel="stylesheet" href="../style/print.css"/>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <style type="text/css">
+                  img{
+                    float: left;
+                    margin-right: 8px;
+                    margin-bottom: 5px；
+                }
+                           h1, h4{    color: rgb(24,103,45);                margin-bottom: 9px;                            -webkit-margin-before: 0.4em;
+
+    }
+    
+                p{
+    
+                    margin: 0px;
+                    line-height: 1.5;
+                }
+            </style>
+        </head>
+        <body>
+             <div class="page">
+                    <div class="toc" style="text-align: center;"><h1>目录</h1></div>'''
+        ii =0 
+        for x in _list_org_urls:
+            print x
+
+            html__+=('<h4>'+x+'</h4>')
+            for y in org_urls[x]:
+
+                html__+=('<p><a href="'+str(ii)+'.html">'+get_title(y)+'</a></p>')
+                if x=='新品推荐 | Product':
+                    ii+=0
+                else:
+                    ii+=1
         f.write(html__)
 def gen_foreword():
     html="""
@@ -548,12 +614,13 @@ def gen_cover():
 
 
 ######################################################################
-gen_foreword()
+#gen_foreword()
 #gen_toc()
-gen_topic()
-gen_column()
-gen_plant()
-gen_editor()
+gen_toc_for_kindle()
+#gen_topic()
+#gen_column()
+#gen_plant()
+#gen_editor()
 #gen_content()
-gen_right()
+#gen_right()
 #gen_cover()

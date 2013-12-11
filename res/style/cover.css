@@ -12,19 +12,20 @@ html,body{
 
 h3,h4{
     font-size:20px;
-    color:#3d69a8;
+    line-height: 20px;
+    margin: 15px;
 }
-h3,h4,h5{
-    line-height:5px;
+h3,h4{
+        color:#3d69a8;
 }
-
 h5{
-font-size:17px;
+font-size:18px;
 font-weight:normal;
-    line-height:6px;
-
+line-height: 17px;
+padding: 0px;
+margin: 12px;
 }
 hr{
-    border:none;
-    border-bottom:1px solid dashed;
+    border-bottom:1px solid green dashed;
 }
+

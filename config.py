@@ -3,21 +3,23 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-base_folder="/vagrant/11/res/"
+# done
+base_folder="/vagrant/12/res/"
 base_arch=base_folder+'arch/'
 
+# done
+which_month='12'
+chief_editor="杨赛"
+chief_editor_desc="杨赛（@lazycai），InfoQ高级策划编辑。写过一点Flash和前端，现在只是个伪码农。在51CTO创办了《Linux运维趋势》电子杂志，偶尔也自己折腾系统。曾混迹于英联邦国家，学过物理，做过一些游戏汉化，练过点长拳，玩过足球、篮球、羽毛球等各类运动和若干乐器。喜欢读《失控》。"
+chief_editor_image="yangsai.jpg"
 
-which_month='11'
-chief_editor="侯伯薇"
-chief_editor_desc="侯伯薇，生于丹东凤城，学在春城长春，工作在滨城大连；虽已年过而立，但自问童心未泯；对代码热情不减，愿与天下程序员共同修炼，不断提升。译有《学习WCF》、《Expert C# 2008 Business Objets》。"
-chief_editor_image="houbowei.jpg"
-
-plant_name='山楂'
+# done
+plant_name='雪松'
 plant_desc='''
-茶花，又名山茶花，山茶科植物，属常绿灌木和小乔木。古名海石榴。有玉茗花、耐冬或曼陀罗等别名，又被分为华东山茶、川茶花和晚山茶。茶花的品种极多，是中国传统的观赏花卉，“十大名花”中排名第七，亦是世界名贵花木之一。分布于重庆、浙江、四川、江西及山东；日本、朝鲜半岛也有分布。
-山茶是常绿阔叶灌木或小乔木。枝条黄褐色，小枝呈绿色或绿紫色至紫褐色。叶片革质，互生，椭圆形、长椭圆形、卵形至倒卵形，长4～10cm，先端渐尖或急尖，基部楔形至近半圆形，边缘有锯齿，叶片正面为深绿色，多数有光泽，背面较淡，叶片光滑无毛，叶柄粗短，有柔毛或无毛。花两性，常单生或2～3朵着生于枝梢顶端或叶腋间。花梗极短或不明显，苞萼9～10片，覆瓦状排列，被茸毛。花单瓣，花瓣5～7片，呈1～2轮覆瓦状排列，花朵直径5～6cm，色大红，花瓣先端有凹或缺口，基部连生成一体而呈简状；雄蕊发达，多达100余枚，花丝白色或有红晕，基部连生成筒状，集聚花心，花药金黄色；雌蕊发育正常，子房光滑无毛，3～4室，花柱单一，柱头3～5裂，结实率高。荫果圆形，外壳本质化，成熟茹果能自然从背缝开裂，散出种子。山茶花为常绿花木，开花于冬春之际，花姿绰约，花色鲜艳，郭沫若同志盛赞曰：“茶花一树早桃红，百朵彤云啸傲中。”对云南山茶郭老也曾赋诗赞美：“艳说茶花是省花，今来始见满城霞；人人都道牡丹好，我道牡丹不及茶。
+雪松，又称香柏，是松科雪松属（学名：Cedrus）植物的统称。由于球果形状相似，与杉树最为接近。原产于喜玛拉雅山脉海拔1,500－3,200米的地带和地中海沿岸1,000－2,200米的地带。
+树高40－50米（也有高60米的），木材带具刺激性的树脂香味，树皮粗糙、有脊状突出，树枝扁平。幼芽分为长（形成树枝，树叶独立地以开放螺旋叶序出现）、短（树叶多长于其上，呈密集螺旋丛生状）两类。叶子常绿，呈针状，长8－60公厘，叶色由亮草绿色到蓝绿色都有，视乎防止水份蒸发的蜡质层厚度而定。球果呈桶状，长6－12厘米，像杉树弓样在成熟时释出长10－15公厘的带翅（长20－30公厘）种子。内有2－3腺体，能分泌树脂阻止松鼠侵袭。球果需一年时间成熟，每年9－10月受粉，翌年种子成熟。此树是某些鳞翅目幼虫的食物。
 '''
-plant_img='shanzha.jpg'
+plant_img='xuesong.jpg'
 
 ## TODO: not 
 recommand_editor_name='姚琪琳'
@@ -36,105 +38,148 @@ Blog：http://kirinboy.cnblogs.com，
 Email：kirinboy@gmail.com。
 '''
 
-foreword_title='第一手知识——切身体验'
+## 
+foreword_title='创业和预测未来'
 forword_content='''
-InfoQ中文站的QCon大会已经为业界的朋友所熟知，三天的日程中，各种演讲干货之多，场面之精彩已经让越来越多的人愿意加入到这个大平台中来交流和分享。而大家不知道的是，为了让各位讲师能够在现场有更出色的表现，InfoQ从今年的QCon北京开始，都会在会前一个月左右为各位讲师安排一场特殊的培训——QCon讲师训练营。</p>
 
-<p>10月12日，我也有幸作为InfoQ的编辑参加了训练营，聆听了杨天颖老师一天的课程，收获非常大。而在10月26日大连本地的QClub活动上，我在演讲中着重实践了杨老师教授的各种技能，包括：手势、J-Cutting的场景转换、放慢语速、把QA环节放在总结之前等等，得到的效果非常不错。</p>
+<blockquote><p>“历史和社会不是缓慢爬行的，而是在一步步地跳跃。它们从一个断层跃上另一个断层，其间极少有波折。而我们（以及历史学家）喜欢相信那些我们能够预测的小的逐步演变。我们只是一台巨大的回头看的机器。”</p></blockquote>
 
-<p>经过活动上的演讲，非常重要的一点就是，我把训练营上获得的知识真正消化吸收了一部分，如果说经过别人总结归纳然后讲述出来的知识是第二手的知识，那么在实践中通过自己的切身体验所获得的知识绝对是第一手的知识，而这种知识也因为其新鲜的程度以及和自己密切相关，所以更容易让我牢记。</p>
+<p>——《黑天鹅：如何应对不可预知的未来》</p>
 
-<p>在演讲的过程中如此，在作为程序员编写各种各样程序的过程中也是一样。
-曾经在公司面试新员工的时候，非常注重的一点就是——是否做过真实的项目，相信很多公司中的面试官也是一样。仅仅学习并掌握了书本上的内容是不够的，“纸上学来终觉浅，绝知此事要躬行”，只有在切实利用学到的知识解决了实际的问题之后，即获得了第一手的知识之后，才能够对其有深入的了解，从而可以在以后的工作中更好地应用。这也许就是大家所说的经验吧。</p>
+<p>今天我们所见到的世界，有多少是你在2010年就预见到了的？有多少是你在2008年就预见到了的？有多少是你在2006年就能预见到的？</p>
 
-<p>在网络上经常会有各种各样的争论，有时是使用各种语言的程序员争论到底哪种语言才最好、才是王道，有时是开发人员和测试人员相互攻击，都认为对方的工作不重要，只有自己的工作才是重中之重。其实，往往争论的同学对于另一方的知识只是有个简单的了解，掌握的大多是二手的知识，即便有少许一手知识，通常也是浅尝辄止。正因为没有切身体验，才会因为不了解真实的情况而去争论。如果一名程序员掌握了多种语言、框架、工具，那么就不会争论孰优孰劣的问题，而是会根据具体的情况选择最为合适的工具来解决问题；如果一个人既做过开发，也做过测试工作，那么就不会厚此薄彼，因为他很清楚，两种角色都是团队的组成元素，都有其重要的作用，缺一不可。</p>
+<p>出来创业的人，在创业过程中大概总有某一个阶段会在心里描绘一幅三年之后、五年之后或者七年之后的市场画面。他们试图找到这个“想象中的世界”与现实世界之间的差距，并作出假设：如果能够填补这个差距，就能到达那个“想象中的世界”。那个世界中也许有一整个今天还不存在的市场，也可能只不过是一些细微的技术改进或模式改进。不管“想象中的世界”和今天的差别是大是小，它总归是一个新的世界。</p>
 
-<p>对于敏捷的方法也同样有很多质疑，不少人总是觉得只有传统的软件工程方法才能够真正保证项目的成功。仅仅比较一下二者的不同就妄下断言。其实，想要知道敏捷的方法是否适合自己的项目，是否能够解决团队管理以及项目开发中的问题，唯一的方法就是“just do it！”尝试过一次，无论成功与失败，都会获得第一手的知识，成功的话，可以作为经验来推广，在以后的项目中进一步应用和提升；失败的话，也明白到底是什么地方出现了问题，以后可以尽量去避免类似情况的发生。这些都要比单纯的怀疑和无意义的争论强得多。</p>
+<p>这是一个预测未来的过程。</p>
 
-<p>第一手的知识之所以重要，是因为它只能存在于一个人的头脑之中，体现在一个人的行为之中，而不是简简单单通过在网上Google一下就能够找到的。一个人只有掌握了足够的第一手知识，才能够不断提升，体现出与其他人的不同，才能够达到传说中的高手境界。
-所以，程序员朋友们，让我们为了掌握更多的第一手知识而努力吧！'''
+<p>未来是一个概率事件。历史告诉我们，什么事都有可能发生，只是概率不同。作为一位预测者，如果你收集到尽可能多的、相关的可靠情报，你对“这件事可能会发生的几率”的判断会比其他人更准确；如果你这时去赌博（比如投资），就有更大的胜率。</p>
 
-column_image = 'topic.png'
-column_title='AWDC（阿里云开发者大会）'
-column_desc='''2013年10月24、25日，阿里云开发者大会在杭州转塘阿里云创业新基地召开，这次会议以“云计算的蝴蝶效应”为主题，第一天进行大赛的参赛作品评选，第二天围绕“移动互联网”、“游戏”、“开发者服务”和“金融创新”设置了分论坛进行分享。
+<p>但是，预测未来只是创业过程中很小的一部分。创业者跟大部分预测者的不同在于：</p>
+
+<p>1、创业者有必要进入大部分人认为“不太可能发生的未来”</p>
+
+<p>2、创业者的大部分工作是为了增加“这件事可能发生的几率”，或者“提前这件事真实到来的时间”</p>
+
+<p>比如，IBM创始人曾预测人类只需要几台计算机。但是当计算机足够便宜、易用之后，市场自己解决了“计算机能做什么”这个问题。</p>
+
+<p>比如在站长自己架站的时代，大部分人想不通一个普通人或者店铺做一个网站有什么用；但是当建立一个自己的页面变得足够简单之后，市场自己解决了这个问题。</p>
+
+<p>比如我自己在2012年之前，一直坚持认为我需要一个全键盘的、待机时间长的手机，直到我入手了我的第一台Android手机之后，我才发现一个真正智能的系统完全可以“一美遮百丑”。</p>
+
+<p>众所周知，创业的成功率很低，因为你不仅需要在正确的时间站在正确的地方，还需要找到推动事件前进的“杠杆”才能增加事情发生的几率。但是在事情真正发生前，你很难猜到这个“杠杆”是什么。所以市场的规则是，创业者们前仆后继的涌入，各自拿出各自猜测的可行道路，最后有极少数的道路走通了，于是我们进入了新时代。</p>
+
+<p>（当然，极少数的道路成为了未来，并不意味着其他道路无法走通。这一切只因为大部分可能发生的未来都是小概率事件。）</p>
+
+<p>在往新世界前进的道路上，大家心里那个“想象中的世界”不会一成不变，往往会进行一些修订。</p>
+
+<p>有些修订出于对现实的妥协，这并不是理想的，因为妥协可能意味着一系列目标下滑的一个开端，结果是你折回到了旧世界当中，沦为平庸。</p>
+
+<p>有些修订出于早期对时间和地点的预判偏离，这是应该的，这会有助于你减少浪费。</p>
+
+<p>有些修订出于你看到了以前没看到的一些东西，这是必要的，因为未来往往来自意外。比如，发现宇宙背景微波辐射的两位科学家本来只是在找天线上的鸟粪。</p>
+
+<p>我觉得旅途当中最重要的是，绝对不要忘记你的“新世界”将带来哪些新的价值。你在行走的路上会遇到各种各样的干扰：我要去学习谁的模式？我要去抢谁的生意？我要去打造什么样的差异化？</p>
+
+<p>不要因此而分心。</p>
+
+<p>我们学习历史，为的是学习他“为什么会发生”，而不是学习他“如何发生的”。没有发生的未来并非不可能发生，我们只不过在赌一个几率。你要做的是专心寻找那只杠杆。</p>
+
+<p>记住你的愿景，反复在脑海中描绘你的新世界，你有更大的可能性会到达那里。</p>
+
+<p>还有，我所说的，很可能是错的。</p>
+
+<blockquote><p>“如果你是石器时代的哲学家，你的部落首席计划官要求你在一份综合报告中预测未来，你必须预测到车轮的发明，否则你就会错过大部分人类进展。……预测要求我们知道将在未来发现的技术。但认识到这一点几乎会自动地让我们立即开始开发这些技术。因此，我们不知道我们将知道什么。”</p></blockquote>
+
+<p>最后给大家赠送一句摘抄：</p>
+
+<blockquote><p>“我们制造玩具，有些玩具改变了世界。”</p></blockquote>'''
+
+#专栏语
+column_image = 'column.jpg'
+column_title='敏捷与结构性模块化'
+column_desc='''
+敏捷开发方法论日益流行，然而大多数“敏捷”专家和分析师都在孤立地讨论敏捷，也就是说忽视了系统“结构”（Kirk Knoernschild是一个例外，他编写了一本名为《Java Application Architecture》的图书阐述这一理念）。考虑到“敏捷”是基础实体的一个重要特性或属性，那么，这种疏忽令人感到很惊讶。一个实体要具有“敏捷”的特性，它必须具有高度的结构性模块化（structural modularity）特征（参见Scott Page的《Diversity & Complexity》）。
+
+也许正因为这种疏忽，许多组织在敏捷开发流程方面进行投入但忽略了应用程序的结构。除了“如何实现一个敏捷的系统？”这个问题以外, 有人肯定还会问, “如何构建一个在结构上具备高度模块化的系统？”
+</p><p>
+这个系列的文章将从探讨结构性模块化和敏捷之间的关系开始。
 '''
-## TODO: change the words of the topic
-topic_image='column.jpeg'
-topic_title='软件测试的方方面面'
-topic_desc='''前几天看到了一篇关于丰田的消息，由于其动力控制系统软件的质量问题，导致在某些情况下会出现刹车失灵的状况。抛去系统架构、设计等方面的原因不谈，我想到更多的是要对系统的测试引起重视。</p>
 
-<p>所以本期专栏让我们来看看软件测试的方方面面，我为大家选择了三篇文章，从三个不同的角度来看软件测试的方方面面。</p>
+## x=done,专题语
+topic_image='topic.jpeg'
+topic_title='内核那些事'
 
-<p>图形化界面上的自动化测试一直困扰着很多测试人员，《GUI功能测试自动化模式》让我们可以了解到，如何使用模式来自动化地完成图形化界面的测试，解决这个老大难问题，从而得到效率上的提升；</p>
+topic_desc='''
+现在互联网的兴盛离不开操作系统的发展，但是对于大部分的互联网从业人员来说，内核一般都是不需要涉及的，但是当应用达到一定的量级之后，
+开发人员将会面临系统性能的问题，此时优化的层面只能从底层入手，这也就是本期专栏的主题：内核那些事。这次的内容不仅讲到在处理大数据时如何断点不丢数据，还通过采访
+UNIX环境高级编程的作者Stephen Rago，听他谈一谈这本程序员手边书一些背后的故事。
+'''
 
-<p>测试覆盖率要达到什么样的标准，是不是越高越好呢？《测试覆盖（率）到底有什么用？》会告诉我们应该如何看待“测试覆盖率”这项KPI指标，如何充分利用好时间和精力；</p>
-
-<p>传统软件工程中，测试一直是下游工程，这也导致了很多问题，《全程软件测试实践：从需求到运营》会向我们展示一种不同以往的测试实践，测试人员全程参与到软件的生命周期之中，这样是否能够解决很多问题呢？'''
-
-
-gen_list=['arch/cover','arch/foreword','ads/InfoQ','arch/toc',
+gen_list=[
+'arch/cover','arch/foreword','ads/InfoQ','arch/toc',
 'ads/qclub',
-'ads/baidusalon',
+'ads/qconbeijing',
 'arch/0',
 'arch/1','arch/2',
 'arch/topic',
 'arch/3','arch/4','arch/5',
 'arch/6','arch/7',
-'ads/tuling',
+'ads/ag1',
 'arch/column','arch/8','arch/9','arch/10',
+'ads/tuling',
 'arch/11','arch/12','arch/13',
-'ads/youpai',
 'ads/book',
 'ads/history',
+'ads/ag2',
 'arch/plant',
 'ads/1kg',
-'ads/right']
+'arch/right']
 org_urls={
-    "人物 | People":
+    "人物 | People": # done
     [
-        "http://www.infoq.com/cn/articles/apue_interview"
+        "http://www.infoq.com/cn/articles/codenvy-interview"
     ],
     
-    "观点 | View":
+    "观点 | View": # done
     [
-        "http://www.infoq.com/cn/news/2013/10/facebook-development-deployment",
-        "http://www.infoq.com/cn/news/2013/10/cloud-nosql"
+        "http://www.infoq.com/cn/news/2013/11/mongodb-things",
+        "http://www.infoq.com/cn/news/2013/11/2014-trend"
     ],
 
-    "本期专题：软件测试的方方面面 | Topic":
+    "本期专题：内核那些事 | Topic": #done
     [
-        "http://www.infoq.com/cn/articles/gui-automation-patterns",
-        "http://www.infoq.com/cn/articles/test-coverage-rate-role",
-        "http://www.infoq.com/cn/articles/whole-software-testing-practice-requirements-to-operational"
+        "http://www.infoq.com/cn/articles/large-data-processing-ensuring-data-not-lost-when-power-off",
+        "http://www.infoq.com/cn/articles/apue_interview",
+        "http://www.infoq.com/cn/articles/wjl-linux-pluggable-authentication-module"
     ],
 
-    "推荐文章 | Article":
+    "推荐文章 | Article": #done
     [
-        "http://www.infoq.com/cn/articles/BigDataPlatform",
-        "http://www.infoq.com/cn/articles/Introduction-to-HotSpot"
+        "http://www.infoq.com/cn/articles/HadoopSecurityModel",
+        "http://www.infoq.com/cn/articles/make-imdg-enterprise-ready"
     ], 
 
-    "特别专栏 | Column":
+    "特别专栏 | Column":#done
     [
-        "http://www.infoq.com/cn/news/2013/11/alibaba-wangjian-on-cloud",
-        "http://www.infoq.com/cn/articles/ali-yun-on-feitian-5k",
-        "http://www.infoq.com/cn/news/2013/11/probing-ioe-and-isv",
+        "http://www.infoq.com/cn/articles/agile-and-structural-modularity-part1",
+        "http://www.infoq.com/cn/articles/agile-and-structural-modularity-part2",
+        "http://www.infoq.com/cn/articles/agile-and-structural-modularity-part3",
     ],
 
-    "避开那些坑 | Void":
+    "避开那些坑 | Void":#done
     [
-        "http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization",
-        "http://www.infoq.com/cn/articles/find-the-same-in-the-variable-from-CDN-to-cloud-computing"
+        "http://www.infoq.com/cn/news/2013/11/spring-web-flaw",
+        "http://www.infoq.com/cn/news/2013/11/six-java-features-to-avoid"
     ],
 
-    "新品推荐 | Product":
-    [
-        "http://www.infoq.com/cn/news/2013/10/oracle-unveils-avatar",
-        "http://www.infoq.com/cn/news/2013/10/hazelcast-3.0",
-        "http://www.infoq.com/cn/news/2013/10/ryuJIT",
-        "http://www.infoq.com/cn/news/2013/10/ios-games-ruby",
-        "http://www.infoq.com/cn/news/2013/10/backbone-1.1.0-released",
-        "http://www.infoq.com/cn/news/2013/10/rubinius-2"
+    "新品推荐 | Product":# done
+    [ 
+        "http://www.infoq.com/cn/news/2013/11/netty4-twitter",
+        "http://www.infoq.com/cn/news/2013/11/android-4-4-kitkat",
+        "http://www.infoq.com/cn/news/2013/11/dart-10",
+        "http://www.infoq.com/cn/news/2013/11/spring-data-neo4j-intro",
+        "http://www.infoq.com/cn/news/2013/11/TypeScript-0-9-1",
+        "http://www.infoq.com/cn/news/2013/11/apigee-nodejs-volos"
     ]
 
 }
